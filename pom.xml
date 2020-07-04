@@ -20,13 +20,17 @@
    <profiles>
     <profile>
         <id>profile1</id>
-        <properties>
-            <webXmlPath>Spring3HibernateApp\WebRoot\WEB-INF</webXmlPath>
-        </properties>
-    </profile>
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <configuration>
+                        <webXml>Spring3HibernateApp\WebRoot\WEB-INF\web.xml</webXml>
+                    </configuration>
+                </plugin>
+			</plugins>
+		</build>
+	</profile>
 </profiles>
-
-   <build>
-      <finalName>java</finalName>
-   </build>
 </project>
